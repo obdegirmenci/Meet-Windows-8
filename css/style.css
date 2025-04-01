@@ -1,0 +1,283 @@
+:root {
+  /* Color Variables */
+  --orange: #F65314;
+  --green: #7CBB00;
+  --blue: #00A1F1;
+  --yellow: #FFBB00;
+  --dark-gray: #454545;
+  --black: #000;
+  --white: #FFF;
+
+  /* Sizing Variables */
+  --frame-width: 600px;
+  --box-size: 280px;
+  --gallery-height: 272px;
+}
+
+/* ===== BASE STYLES ===== */
+html {
+  height: auto;
+  min-height: 100%;
+  background: url(../img/branding//Windows_8-Wallpaper.jpg) center/cover no-repeat;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Noto Sans", "Tahoma", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+a, a:hover, a:visited, a:focus {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/* ===== LAYOUT STRUCTURE ===== */
+#tint {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: var(--black);
+  opacity: 0;
+  z-index: 0;
+}
+
+#frame {
+  width: var(--frame-width);
+  height: 700px;
+  margin: 0 auto;
+  position: relative;
+  padding-top: 80px;
+}
+
+#top {
+  width: var(--frame-width);
+  height: var(--frame-width);
+  margin: 0 auto;
+  background: url(../img/branding/Windows_8-Logo.png) center/cover;
+}
+
+#bottom {
+  width: var(--frame-width);
+  height: 100px;
+  color: var(--white);
+  text-align: center;
+  font: 400 13px/1 "Noto Sans", "Tahoma", sans-serif;
+  text-shadow: 0 0 10px var(--black);
+}
+
+#bottomLeft, #bottomCenter, #bottomRight {
+	width:200px;
+	height:100px;
+	float:left;
+}
+
+#msLogo {
+	width: 100px;
+	height: 25px;
+}
+
+/* ===== COMPONENTS ===== */
+/* Shared Box Styles */
+.box {
+  width: var(--box-size);
+  height: var(--box-size);
+  margin: 10px;
+  float: left;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+#orange { background-color: var(--orange); }
+#green { background-color: var(--green); }
+#blue { background-color: var(--blue); }
+#yellow { background-color: var(--yellow); }
+
+/* Box Content */
+.header {
+  height: 60px;
+}
+
+.headerLeft {
+  width: 245px;
+  height: 60px;
+  float: left;
+  padding-left: 14px;
+  box-sizing: border-box;
+  font: 300 34px/1 "Noto Sans", "Tahoma", sans-serif;
+  color: var(--dark-gray);
+}
+
+.headerRight {
+  width: 26px;
+  height: 26px;
+  float: left;
+  background: url(../img/navi/close.png) top no-repeat;
+  cursor: pointer;
+}
+
+.content {
+  width: 260px;
+  padding: 10px;
+  font: 400 18px/1.25 "Noto Sans", "Tahoma", sans-serif;
+  color: var(--dark-gray);
+  text-align: left;
+}
+
+.hiddenLine {
+  display: none;
+}
+
+/* Detail Content */
+.detail {
+  position: relative;
+}
+
+.detailFader {
+  height: 50px;
+  position: relative;
+  z-index: 22;
+}
+
+#orange .detailFader { background-image: url(../img/effect/slide_fadeout-orange.png); }
+#green .detailFader { background-image: url(../img/effect/slide_fadeout-green.png); }
+#blue .detailFader { background-image: url(../img/effect/slide_fadeout-blue.png); }
+#yellow .detailFader { background-image: url(../img/effect/slide_fadeout-yellow.png); }
+
+.detailContent {
+  height: 380px;
+  padding: 24px;
+  font: 400 16px/1.1 "Noto Sans", sans-serif;
+  color: var(--dark-gray);
+  text-align: left;
+  overflow-y: scroll;
+  position: absolute;
+  top: 0;
+  z-index: 21;
+}
+
+.detailContent > img {
+	width: 100%;
+}
+
+/* Gallery Styles */
+#gallery {
+  height: var(--gallery-height);
+  position: relative;
+  margin: 20px auto;
+  display: none;
+}
+
+.gallery-slide {
+  height: var(--gallery-height);
+  color: var(--white);
+  font: 400 14px/1 "Noto Sans", "Tahoma", sans-serif;
+  text-align: left;
+  position: absolute;
+}
+
+#info1 { display: none; z-index: 2; }
+#info2 { display: none; z-index: 1; }
+
+.gallery-nav {
+  width: 38px;
+  height: var(--gallery-height);
+  float: left;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+#infoLeftX, #infoLeftY { background-image: url(../img/navi/leftArrow.png); }
+#infoRightX, #infoRightY { background-image: url(../img/navi/rightArrow.png); }
+
+.gallery-image {
+/*   width: 484px; */
+  height: var(--gallery-height);
+  float: left;
+}
+
+#info1Image { background: url(../img/box/orange/img-1.jpg); }
+#info2Image { background: url(../img/box/orange/img-2.jpg); }
+
+.infoMiddle {
+/*   width: 484px; */
+  width: 456px;
+  height: 120px;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: relative;
+  top: 152px;
+  box-sizing: border-box;
+  padding: 14px 10px;
+}
+
+.infoTitle {
+  width: 100%;
+  margin-bottom: 8px;
+  font: bold 24px/1 "Noto Sans", "Tahoma", sans-serif;
+}
+
+.infoContent {
+  width: 100%;
+}
+
+/* Yellow Box Specific */
+#yellow ul {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  cursor: default;
+}
+
+#yellow ul li {
+  width: 100%;
+  background-color: transparent;
+  transition: all 0.3s ease;
+}
+
+#yellow ul li:hover {
+  background-color: var(--white);
+}
+
+#yellow ul li img {
+  float: left;
+  margin-right: 20px;
+}
+
+.appDescription {
+  display: flex;
+  align-items: center;
+  margin: 20px 0px;
+}
+
+/* Utility Classes */
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Mobile devices */
+@media only screen and (max-width: 599px) {
+  body::before {
+    content: "This app is only compatible with desktop devices wider than 600px.";
+    display: block;
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+    background: #f8f9fa;
+    color: #dc3545;
+  }
+
+  body > *:not(body::before) {
+    display: none !important;
+  }
+}
