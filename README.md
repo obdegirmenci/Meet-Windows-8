@@ -16,3 +16,6 @@ Hover and click on any of the four colored modules to view detailed information:
 ### Navigation Controls
 - Close any expanded module by clicking the [X] button in the top-right corner
 - In the "Work and Play" section, use the arrow buttons to navigate through the gallery slides
+
+## Copyright
+All product images and screenshots are property of Microsoft and used for demonstration purposes only.
