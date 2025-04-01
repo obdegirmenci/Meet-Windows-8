@@ -1,6 +1,8 @@
 # Meet Windows 8
 A dynamic, animated showcase highlighting Windows 8's key features through interactive module. Built with JS/jQuery/CSS as a school project in 2012. Since then, many things have broken and ceased to function. Revised for commemorative purposes.
 
+https://obdegirmenci.github.io/Meet-Windows-8/
+
 ## How to Use
 ### Automatic Startup Animation
 - When the page loads, an introductory animation will play automatically.
